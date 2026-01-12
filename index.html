@@ -1,270 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal portfolio </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SaiRam | Unreal Engine Game Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="Style.css">
-    <script src="https://kit.fontawesome.com/3d4386e737.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <video autoplay loop muted playsinline id="background-video">
         <source src="Images/background-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#contact">contact</a></li>
-                <i class="fas fa-circle-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-          <p2>Unreal Game Developer</p2><br>
-          <br><h1>Hi, I'm <span>SaiRam</span> </h1>  
+
+    <div class="scanlines"></div>
+
+    <!-- Hero Section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo"></div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="hero-text">
+                <img class="ue-logo-pop" width="64" height="64" src="https://img.icons8.com/nolan/64/unreal-engine.png" alt="unreal-engine"/>
+                <p class="role">UNREAL GAME DEVELOPER</p>
+                <h1>Hi, I'm <span class="glitch" data-text="SaiRam">SaiRam</span></h1>
+                <video autoplay loop muted playsinline class="back-char">
+                    <source src="Images/Hi2.webm" type="video/webm">
+                </video>
+                <p class="tagline">Building immersive worlds with Blueprints & C++</p>
+            </div>
         </div>
     </div>
-</div>
-<!--------------about------------------>
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                    <img src="Images/coverMobile.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class="subtitle">About Me</h1><br>
-                <ol class="dotted-list">
-                <p><li>Passionate Unreal Engine developer with experience in Blueprints and C++.</li>
-                   <li> Looking for an internship to build engaging gameplay experiences and deepen my expertise in game development.</li>
-                   <li> Strong foundation in game programming, prototyping, AI behavior, and Unreal Engine workflows.</li>
-                   <li>Actively working on multiplayer mechanics and advanced Unreal Engine features.</li>
-                </p></ol>
-               
-               <style>
-                    .dotted-list {
-                      list-style-type: disc; /* Use bullet points instead of numbers */
-                    }
-                  </style>
-                   
+
+<!-----------------------------------------------------------------------------------------------About Section --------------------------------------------------------------------------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <h1 class="subtitle">About Me</h1>
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="profile-image-wrapper">
+                        <img src="Images/coverMobile.jpg" alt="SaiRam" class="profile-img">
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <ul class="dotted-list">
+                        <li>Passionate Unreal Engine developer with hands-on experience in Blueprints and C++.</li>
+                        <li>Currently building gameplay systems, AI.</li>
+                        <li>Strong focus on performance optimization and clean, modular code.</li>
+                        <li>Seeking internships or entry-level role to contribute to real games.</li>
+                    </ul>
+
                     <div class="tab-titles">
+                        <video  autoplay loop muted playsinline class="running-character">
+                            <source src="Images/chrun.webm  " type="video/webm">
+                        </video>
+                        <video  autoplay loop muted playsinline class="running-character2">
+                            <source src="Images/chrun2.webm  " type="video/webm">
+                        </video>
                         <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                        <p class="tab-links experience" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('Education')">Education</p>
-                        <p class="tab-links" onclick="opentab('certifications')">certifications</p>
-                        
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('Projects')">Projects</p>
                     </div>
+
+<!---------------------------------------------------------------------------------------- Skills tab --------------------------------------------------------------------------------------------------------->
                     <div class="tab-contents active-tab" id="Skills">
-                        <ul>
-                            <li><span>Unreal Engine 5</span><br> Blueprints, C++</li>
+                        <div class="skills-scroller-wrapper">
+        <button class="scroll-btn left" onclick="scrollSkills('left')"><i class="fas fa-chevron-left"></i></button>
+        
+        <div class="horizontal-scroller" id="skills-scroller">
+            <div class="scroll-container skills-grid">
+                <!-- Card 1: Unreal Engine -->
+                <div class="skill-card">
+                    <h3>Unreal Engine 5</h3>
+                    <ul>
+                        <li>Blueprints</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
 
-                            <li><span>Gameplay Programming</span><br> (Player movement, AI behavior, obstacle interactions,Health and damage systems)</li>
+                <!-- Card 2: Gameplay Programming -->
+                <div class="skill-card">
+                    <h3>Gameplay Programming</h3>
+                    <ul>
+                        <li>Player Controllers</li>
+                        <li>AI Behavior</li>
+                        <li>Combat Systems</li>
+                        <li>Health & Damage</li>
+                    </ul>
+                </div>
 
-                            <li>Game Optimization & Debugging</li>
+                <!-- Card 3: Version Control + Optimization (you can split or add more) -->
+                <div class="skill-card">
+                    <h3>Optimization & Tools</h3>
+                    <ul>
+                        
+                        <li>Debugging</li>
+                         <li>VS-Code</li>
+                        <li>Git, GitHub, Git LFS</li>
+                    </ul>
+                </div>
 
-                            <li><span>Version Control</span><br>Git, GitHub</li>
+                <!-- Optional empty/future card -->
+                <div class="skill-card coming-soon">
+                    <div>More Skills<br><span>COMING SOON</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="scroll-btn right" onclick="scrollSkills('right')"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
 
-                           
-                           
-                        </ul>
-                    </div>
-                   
+<!---------------------------------------------------------------------------------------- Experience tab --------------------------------------------------------------------------------------------------------->
+
                     <div class="tab-contents" id="Experience">
-                        <ul>
-                            <li><span>Drone Rampage (Blueprints) - Unreal Engine 5</span><br> Designed and developed a drone-based action game using Unreal Engine Blueprints.
-                            <br>Implemented player movement, shooting mechanics, and enemy interactions.
-                            <br>Created interactive UI elements and game logic.</li>
+    <div class="experience-scroller-wrapper">
+        <button class="scroll-btn left" onclick="scrollExperience('left')"><i class="fas fa-chevron-left"></i></button>
+        
+        <div class="horizontal-scroller" id="experience-scroller">
+            <div class="scroll-container experience-grid">
+                <!-- future experiences card -->
+                <div class="experience-card">
+                    <h3>Unreal Game Programmer Intern</h3>
+                    <p class="company">
+                        <a href="https://www.linkedin.com/posts/sairam-yedida-9b367a253_internship-gamedevelopment-unrealengine-activity-7361321720441417728-9cCL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6RuBcBUtl9GwBDtWi6pVkGJXsGOVBWf2M"
+                           target="_blank" rel="noopener noreferrer">
+                            Arcanion (Indie Studio)
+                        </a>
+                        • May 2024 – August 2024
+                    </p>
+                    <ul>
+                        <li>Developed a mini-game with 3 playable levels using Unreal Engine.</li>
+                        <li>Level 1: Obstacle-based gameplay with hidden collectibles.</li>
+                        <li>Level 2: Fast-paced running collectibles mechanic.</li>
+                        <li>Level 3: Enemy-based combat where players defeat enemies and collect drops.</li>
+                        <li>First assigned task focused on core gameplay logic and level flow.</li>
+                        <li>Replaced UI placeholders and implemented functional, interactive UI elements for subsequent tasks.</li>
+                    </ul>
+                </div>
 
-                            <li><span>Escape Island (C++) - Unreal Engine 5</span><br> Developed a C++-based obstacle course game where players navigate moving obstacles.
-                                <br>Implemented custom player movement and obstacle behavior using C++.
-                                <br>Designed multiple levels with increasing difficulty.</li>
-                           
-                        </ul>
-                    </div>
-                   
+                <!-- Placeholder for future experiences -->
+                <div class="experience-card coming-soon">
+                    <div>Next Role<br><span>COMING SOON</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="scroll-btn right" onclick="scrollExperience('right')"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
+
+
                     <div class="tab-contents" id="Education">
                         <ul>
-                            <li><span>Bachelors of technology</span><br> CSE (AI&ML)   -2025</li>
-                            
-                           
+                            <li><span>B.Tech CSE (AI & ML)</span><br> 2025</li>
                         </ul>
                     </div>
-                  
-                    <div class="tab-contents" id="certifications">
-                        <ul>
-                            <li><span>Git & Version Control </span<br><a href="https://www.udemy.com/certificate/UC-da5fbeec-8209-451e-b17c-dba693ee56f4/"></a></li>
-                            
-                           
-                        </ul>
-                    </div>
+<!---------------------------------------------------------------------------------------Certifications tab------------------------------------------------------------------------------------------------------------>
+<div class="tab-contents" id="certifications">
+    <div class="certifications-scroller-wrapper">
+        <button class="scroll-btn left" onclick="scrollCertifications('left')"><i class="fas fa-chevron-left"></i></button>
+        
+        <div class="horizontal-scroller" id="certifications-scroller">
+            <div class="scroll-container certifications-grid">
+                <!-- Certification Card 1 -->
+                <div class="certification-card">
+                    <h3>Git & Version Control</h3>
+                    <p class="issuer">Udemy Certificate</p>
+                    <ul>
+                    </ul>
+                </div>
 
-                    
+                <!-- Add more certifications here as cards -->
+                <div class="certification-card coming-soon">
+                    <div>More Certifications<br><span>COMING SOON</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="scroll-btn right" onclick="scrollCertifications('right')"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------Projects tab------------------------------------------------------------------------------------------------->
+<div class="tab-contents" id="Projects">
+    <div class="projects-scroller-wrapper">
+        <button class="scroll-btn left" onclick="scrollProjects('left')"><i class="fas fa-chevron-left"></i></button>
+        
+        <div class="horizontal-scroller" id="projects-scroller">
+            <div class="scroll-container projects-grid">
+                <!-- Project Card 1: Drone Rampage -->
+                <div class="project-card">
+                    <h3>Drone Rampage</h3>
+                    <a href="https://github.com/sairamyedida06/Drone_raampage_Demo" target="_blank" class="git-icon-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <p class="tech">Unreal Engine 5.4,Blueprints</p>
+                    <ul>
+                        <li>Fast-paced drone action shooter</li>
+                        <li>Custom player movement & shooting mechanics</li>
+                        <li>Enemy AI & interactive UI</li>
+                        <li><a href="https://sairamyedida.itch.io/drone-rampage" target="_blank">Play on itch.io</a></li>
+                    </ul>
+                </div>
+
+                <!-- Project Card 2: Escape Island -->
+                <div class="project-card">
+                    <h3>Escape Island</h3>
+                    <a href="https://github.com/sairamyedida06/Escape_Island" target="_blank" class="git-icon-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <p class="tech">Unreal Engine 5.5, C++ + Blueprints</p>
+                    <ul>
+                        <li>3D obstacle course with dynamic moving platforms</li>
+                        <li>Zombie AI & combat systems</li>
+                        <li>Multiple levels with increasing difficulty</li>
+                        <li><a href="https://sairamyedida.itch.io/escape-island" target="_blank">Play on itch.io</a></li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>Melee Combat & Locomotion Assignment</h3>
+                    <a href="https://github.com/sairamyedida06/Melee_Combat_and_Locomotion_Assignment" target="_blank" class="git-icon-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <p class="tech">Unreal Engine 5.5,Blueprints</p>
+                    <ul>
+                        <li>8-Way Locomotion System .</li>
+                        <li>Melee Combat Mechanics with precision hit detection.</li>
+                        <li>Enemy AI chasing AI with dynamic health bars and damage feedback.</li>
+                         <li>48-Hour Technical Delivery within a strict deadline.</li>   
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3>pirates-and-skeletons</h3>
+                    <a href="https://github.com/sairamyedida06/Melee_Combat_and_Locomotion_Assignment" target="_blank" class="git-icon-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <p class="tech">Unreal Engine 5.5,Blueprints</p>
+                    <ul>
+                        <li>eimagined Mario Level 1-1 with a pirate and skeleton theme for a game jam.</li>
+                        <li>Developed a stylized, cartoonish look using custom 3D cell-shading.</li>
+                        <li>Designed a dynamic main menu.</li>
+                         <li>Converted classic 2D platformer mechanics into a 3D environment</li>   
+                    </ul>
+                </div>
+
+                <!-- Placeholder -->
+                <div class="project-card coming-soon">
+                    <div>Next Project<br><span>COMING SOON</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="scroll-btn right" onclick="scrollProjects('right')"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- -----------------my games-------------->
-<div id="games">
-<div class="games">
-    <div class="container">
-        <h1 class = "subtitle">My Games</h1>
-        <div class="GamesList">
+<!----------------------------------------------------------------------------------------------- My Games ----------------------------------------------------------------------------------------------------------->
+    <div id="games" class="games-section">
+        <div class="container">
+            <h1 class="subtitle">My Games</h1>
+            
+            <div class="horizontal-scroller-wrapper">
+                <button class="scroll-btn left" onclick="scrollGames('left')"><i class="fas fa-chevron-left"></i></button>
+                
+                <div class="horizontal-scroller" id="games-scroller">
+                    <div class="scroll-container">
 
-            <div>
-                <i class="fa-solid fa-gamepad"></i>
-                <h2>Drone Rampage</h2>
-                <p>An action-packed drone shooting game built with Unreal Engine Blueprints.</p>
-                <a href="https://sairamyedida.itch.io/drone-rampage" target="_blank" class="play-now">Play Now</a>
-                <p></p>
-                <iframe width="650" height="315" 
-                            src="https://www.youtube.com/embed/saw9HczIb18?si=d0B_xGQ0WNayQDGK" 
-                            title="Drone Rampage Gameplay"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                <a href=""></a>
-            </div>
-            <div>
-                <i class="fa-solid fa-puzzle-piece"></i>
-                    <h2>Escape Island</h2>
-                    <p>A fun-packed 3d platformer with Zombie attacks and dangerous obstacles made with a combination of c++ and Blueprints</p>
-                    <a href="https://sairamyedida.itch.io/escape-island" target="_blank" class="play-now2">Play Now</a>
-                    <iframe width="650" height="315" src="https://www.youtube.com/embed/2moyD3tCQqE?si=m0XRGMw2MYCGMYyM" 
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe>
+                        <div class="game-card">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <h2>Drone Rampage</h2>
+                            <p>Fast-paced drone shooter built with Unreal Blueprints</p>
+                            <a href="https://sairamyedida.itch.io/drone-rampage" target="_blank" class="btn neon-btn">Play Now</a>
+                            <a href="DroneRampage.html" target="_blank" class="btn neon-bt2">Know More</a>
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="260" src="https://www.youtube.com/embed/saw9HczIb18" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="game-card">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                            <h2>Escape Island</h2>
+                            <p>3D platformer with zombie attacks – C++ + Blueprints</p>
+                            <a href="https://sairamyedida.itch.io/escape-island" target="_blank" class="btn neon-btn">Play Now</a>
+                             <a href="DroneRampage.html" target="_blank" class="btn neon-bt2">Know More</a>
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="260" src="https://www.youtube.com/embed/2moyD3tCQqE" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                         <div class="game-card">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                            <h2>Pirates and skeletons</h2>
+                            <p>Game jam project</p>
+                            <a href="https://sairamyedida.itch.io/pirates-and-skeletons" target="_blank" class="btn neon-btn">Play Now</a>
+                             <a href="DroneRampage.html" target="_blank" class="btn neon-bt2">Know More</a>
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="260" src="https://www.youtube.com/embed/zgzgHnm0Of4?si=cKCpIaDbm2w-Bqal" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="game-card coming-soon">
+                            <div>Project 4<br><span>COMING SOON</span></div>
+                        </div>
+                        
+                    </div>
                 </div>
                 
-        </div>
-
-    </div>
-</div>
-</div>
-
-<!------------------------------------------------------portfolio-------------------------------------------------------->
-<div id="portfolio">
-    <div class="container">
-        <h1 class =subtitle>Demo</h1>
-        <div class="GamesList">
-            <div class="Games">
-                <h2>Drone Rampage</h2>
-                <img src="Images/0.png" alt=""></b>
-                <img src="Images/1.png" alt="">
-                <img src="Images/2.png" alt="">
-                <img src="Images/3.png" alt="">
-                <img src="Images/4.png" alt="">
+                <button class="scroll-btn right" onclick="scrollGames('right')"><i class="fas fa-chevron-right"></i></button>
             </div>
-           
-            <div class="Games">
-                <h2>Escape Island</h2>
-                <img src="Images/22.png " alt="">
-                <img src="Images/11.png " alt="">
-                <img src="Images/33.png " alt="">
-                <img src="Images/44.png " alt="">
-                <img src="Images/e.png" alt="">
+        </div>
+    </div>
+
+<!------------------------------------------------------------------------------------------------- Portfolio ---------------------------------------------------------------------------------------------------------->
+    <div id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h1 class="subtitle">In Game Pictures</h1>
+            
+            <div class="horizontal-scroller-wrapper">
+                <button class="scroll-btn left" onclick="scrollPortfolio('left')"><i class="fas fa-chevron-left"></i></button>
                 
+                <div class="horizontal-scroller" id="portfolio-scroller">
+                    <div class="scroll-container">
+                        <div class="portfolio-card">
+                            <h3>Drone Rampage</h3>
+                            <div class="screenshot-grid">
+                                <img src="Images/0.png" alt="Screenshot" class="screenshot-img">
+                                <img src="Images/1.png" alt="Screenshot" class="screenshot-img">
+                                <img src="Images/2.png" alt="Screenshot" class="screenshot-img">
+                                <img src="Images/3.png" alt="Screenshot" class="screenshot-img">
+                                <img src="Images/4.png" alt="Screenshot" class="screenshot-img">
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card">
+                            <h3>Escape Island</h3>
+                            <div class="screenshot-grid">
+                                <img src="Images/22.png" alt="Screenshot" class="screenshot-img">
+                                <img src="Images/11.png" alt="Screenshot" class="screenshot-img">
+                                <img src="Images/33.png" alt="Screenshot" class="screenshot-img">
+                                <img src="Images/44.png" alt="Screenshot" class="screenshot-img">
+                                <img src="Images/e.png" alt="Screenshot" class="screenshot-img">
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card coming-soon">
+                            <div>Project 3<br><span>SCREENSHOTS<br>COMING SOON</span></div>
+                        </div>
+
+                        <div class="portfolio-card coming-soon">
+                            <div>Project 4<br><span>SCREENSHOTS<br>COMING SOON</span></div>
+                        </div>
+                        <div class="portfolio-card coming-soon">
+                            <div>Project 5<br><span>SCREENSHOTS<br>COMING SOON</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="scroll-btn right" onclick="scrollPortfolio('right')"><i class="fas fa-chevron-right"></i></button>
             </div>
 
-
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://sairamyedida.itch.io/" target="_blank" class="btn neon-btn large">More Games →</a>
+            </div>
         </div>
-        <a href="https://sairamyedida.itch.io/" class="btn">See More</a>
     </div>
-</div>
-<!-----------------------------------------------------contact---------------------------------------------------------->
+
+<!--------------------------------------------------------------------------- Contact ------------------------------------------------------------------------------------------>
     <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="subtitle">Contact Info</h1>
-                    <p><i class="fa-solid fa-envelope"></i>sairamyedidaoffl@gmail.com</p>
-                    <p><i class="fa-solid fa-phone-volume"></i>6309641235</p>
-                    <div class="icons">
+                    <h1 class="subtitle">Get In Touch</h1>
+                    <p><i class="fa-solid fa-envelope"></i> sairamyedidaoffl@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i> +91 6309641235</p>
+                    <div class="social-icons">
                         <a href="https://www.linkedin.com/in/sairam-yedida-9b367a253/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/sairam1606"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.instagram.com/sairam_yedida?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/sairamyedida06/"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/sairam_yedida/"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    <a href="Images/Yedida Sai Ram.pdf" class="btn btn2">Download CV</a>
+                    <a href="Images/Yedida Sai Ram.pdf" download class="btn neon-btn">Download CV</a>
                 </div>
-                <div class="contact-Right">
+
+                <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="name" placeholder="YOUR NAME" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="name" name="number" placeholder="Your Number" >
+                        <input type="tel" name="number" placeholder="Your Number">
                         <textarea name="message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">submit</button>
+                        <button type="submit" class="btn neon-btn">Send Message</button>
                     </form>
                     <span id="msg"></span>
                 </div>
-
             </div>
-          </div>
-          
+        </div>
     </div>
 
+    <!-- Scripts -->
+    <script>
 
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname)
-    {
-        for(tablink of tablinks)
+         // Close mobile menu on link click
+    document.querySelectorAll('#sidemenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('sidemenu').style.right = '-260px';
+        });
+    });
+    
+        function scrollExperience(direction) 
         {
-        tablink.classList.remove("active-link")
-        }
-    for(tabcontent of tabcontents)
-        {
-        tabcontent.classList.remove("active-tab")
-        }
-        event.currentTarget.classList.add("active-link")
-        document.getElementById(tabname).classList.add("active-tab")
+    const scroller = document.getElementById('experience-scroller');
+    const scrollAmount = 600;
+    if (direction === 'left') {
+        scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+        scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
-
-</script>
-<script>
-    var sidemen = document.getElementById("sidemenu");
-
-function openmenu() {
-    sidemen.style.right = "0"; // Bring the menu fully into view
 }
 
-function closemenu() {
-    sidemen.style.right = "-300px"; // Move the menu off-screen
+        function scrollCertifications(direction) {
+    const scroller = document.getElementById('certifications-scroller');
+    const scrollAmount = 400;
+    if (direction === 'left') {
+        scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+        scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
 }
-</script>
-<form name="submit-to-google-sheet">
+
+function scrollProjects(direction) {
+    const scroller = document.getElementById('projects-scroller');
+    const scrollAmount = 400;
+    if (direction === 'left') {
+        scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+        scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+}
+
+        function scrollSkills(direction) {
+    const scroller = document.getElementById('skills-scroller');
+    const scrollAmount = 360;  // approx card width + gap
+    if (direction === 'left') {
+        scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+        scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
     
-    
-  </form>
-  
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxCeU8ty_97mx8PrbZflJPeFp3PP4IwGglrmqD-2EuIsvVsvP2Hx999ooHl4yRF3wW0/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()  
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-    
+}
+        // Tabs - Fully working
+        function opentab(tabname) {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
+            for (let link of tablinks) link.classList.remove("active-link");
+            for (let content of tabcontents) content.classList.remove("active-tab");
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // Mobile menu
+        function openmenu() { document.getElementById("sidemenu").style.right = "0"; }
+        function closemenu() { document.getElementById("sidemenu").style.right = "-300px"; }
+
+        // Scroll buttons
+        function scrollGames(direction) {
+            const scroller = document.getElementById('games-scroller');
+            const scrollAmount = 550;
+            if (direction === 'left') scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            else scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        function scrollPortfolio(direction) {
+            const scroller = document.getElementById('portfolio-scroller');
+            const scrollAmount = 550;
+            if (direction === 'left') scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            else scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        // Form submit
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxCeU8ty_97mx8PrbZflJPeFp3PP4IwGglrmqD-2EuIsvVsvP2Hx999ooHl4yRF3wW0/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(() => {
+                    msg.innerHTML = "Message sent successfully!";
+                    setTimeout(() => msg.innerHTML = "", 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
 </body>
 </html>
